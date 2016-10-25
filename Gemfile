@@ -57,3 +57,5 @@ group :development do
   gem 'spring'
 end
 
+gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+
