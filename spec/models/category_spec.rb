@@ -4,7 +4,8 @@ RSpec.describe Category, type: :model do
   context "validations" do
   	it "checks for presence of name" do
   		category = Category.new
-  		expect(category.save).to eq false
+  		expect(category.save).to eq true
   	end
   end
+
 end

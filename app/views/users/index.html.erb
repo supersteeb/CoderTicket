@@ -1,0 +1,23 @@
+	<h1>Users</h1>
+
+
+	<table class="table">
+		<thead class="thead thead-default">
+			<tr>
+				<th>Full Name</th>
+				<th>Email</th>
+				<th>Created at</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @users.each do |user| %>
+			<tr>
+				<td><%= user.name %></td>
+				<td><%= user.email %></td>
+				<td><%= user.created_at.to_formatted_s(:long_ordinal) %></td>
+				<td><%#<%= link_to "Add Friend", friendships_path(:friend_id => user), method: :post  %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
