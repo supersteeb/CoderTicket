@@ -1,0 +1,62 @@
+<div class="row">
+	<div class="col-sm-4">
+
+		<%= form_for(event) do |f| %>
+			<% if event.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(event.errors.count, "errors") %>
+						prohibited this event from being saved: </h2>
+						<ul>
+							<% event.errors.full_messages.each do |message| %>
+								<li><%= message %></li>
+							<% end %>
+						</ul>
+				</div>
+			<% end %>
+
+		  <div class="form-group">
+		    <%= f.label :name %>
+		    <%= f.text_field :name, class: 'form-control' %>
+		  </div>
+
+		  <div class="form-group">
+		    <%= f.label "Description" %>
+		    <%= f.text_area :extended_html_description, class: 'form-control' %>
+		  </div>
+
+		  <div class="form-group">
+		    <%= f.label :starts_at %>
+		    <%= f.date_select :starts_at, class: 'form-control' %>
+		    <%= f.label "time" %>
+		    <%= f.time_select :starts_at, :ignore_date => true, class: 'form-control' %>
+		  </div>
+
+		  <div class="form-group">
+		    <%= f.label :ends_at %>
+		    <%= f.date_select :ends_at, class: 'form-control' %>
+		    <%= f.label "time" %>
+		    <%= f.time_select :ends_at, :ignore_date => true, class: 'form-control' %>
+		  </div>
+
+		  <div class="form-group">
+		    <%= f.label :venue_id %>
+		    <%= f.text_field :venue_id, class: 'form-control' %>
+		  </div>
+
+		  <div class="form-group">
+		    <%= f.label :category_id %>
+		    <%= f.text_field :category_id, class: 'form-control' %>
+		  </div>
+
+		  <div class="form-group">
+		    <%= f.label :hero_image_url %>
+		    <%= f.text_field :hero_image_url, class: 'form-control' %>
+		  </div>
+
+		  <div class="actions">
+		    <%= f.submit "Create Event", class: 'btn btn-primary' %>
+		  </div>
+		<% end %>
+
+	</div>
+</div>

@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-	class SessionsController < ApplicationController
 	  
 	 # skip_before_action :authenticate, only: [:new, :create]
 
@@ -16,14 +15,12 @@ class SessionsController < ApplicationController
 
 	  def create
 	  	if @user = User.find_by(email: params[:email]) and @user.authenticate(params[:password])
-	  			session[:user_id] = @user.id
-	  			redirect_to received_user_messages_path(@user.id), flash: {success: "Logged In"}
-	  		else
-	  			flash.now[:error] = "Invalid username or password."
-	  			render 'new'
-	  		end
+  			session[:user_id] = @user.id
+  			redirect_to events_path, flash: {success: "Logged In"}
+  		else
+  			flash.now[:error] = "Invalid username or password."
+  			render 'new'
+  		end
 	  end
-
-	end
 
 end

@@ -1,3 +1,5 @@
+
+
 <div class='events-header' style='background-image: url(<%= header_background_image_url %>)'>
   <div class="container">
     <h2> Discover upcoming events </h2>
@@ -6,6 +8,7 @@
     </form>
   </div>
 </div>
+<%= link_to "Create New Event", new_event_path %>
 <div class="container-fluid events-list">
     <% @events.in_groups_of(3) do |g| %>
       <div class="row">
@@ -15,4 +18,9 @@
       </div>  
     <% end %>
   </div>
+
 </div>
+
+<div>
+
+  </div>

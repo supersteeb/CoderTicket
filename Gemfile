@@ -58,4 +58,5 @@ group :development do
 end
 
 gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+gem "time_splitter"
 
