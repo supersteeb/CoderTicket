@@ -13,6 +13,7 @@
 						</ul>
 				</div>
 			<% end %>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
 
 		  <div class="form-group">
 		    <%= f.label :name %>
@@ -25,27 +26,28 @@
 		  </div>
 
 		  <div class="form-group">
-		    <%= f.label :starts_at %>
+		  	<%= f.label :starts_at %>
+		    <%= f.time_select :starts_at, :ignore_date => true, class: 'form-control' %> <br/> 
+		    <%= f.label "on" %>
 		    <%= f.date_select :starts_at, class: 'form-control' %>
-		    <%= f.label "time" %>
-		    <%= f.time_select :starts_at, :ignore_date => true, class: 'form-control' %>
+
 		  </div>
 
 		  <div class="form-group">
-		    <%= f.label :ends_at %>
-		    <%= f.date_select :ends_at, class: 'form-control' %>
-		    <%= f.label "time" %>
-		    <%= f.time_select :ends_at, :ignore_date => true, class: 'form-control' %>
+		  	<%= f.label :ends_at %> 
+		  	<%= f.time_select :ends_at, :ignore_date => true %> <br/> 
+		    <%= f.label "on" %>
+		    <%= f.date_select :ends_at %>
 		  </div>
 
 		  <div class="form-group">
 		    <%= f.label :venue_id %>
-		    <%= f.text_field :venue_id, class: 'form-control' %>
+		    <%= f.select :venue_id, Venue.all.map {|u| [u.name, u.id]} %>
 		  </div>
 
 		  <div class="form-group">
 		    <%= f.label :category_id %>
-		    <%= f.text_field :category_id, class: 'form-control' %>
+		    <%= f.select :category_id, Category.all.map {|u| [u.name, u.id]} %>
 		  </div>
 
 		  <div class="form-group">

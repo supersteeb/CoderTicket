@@ -7,9 +7,12 @@
       </p>
       <h1> Hot Events </h1>
       <div class="ticket-list">
+
         <% @event.ticket_types.each do |ticket_type| %>
           <div class="row">
+
             <div class="col-md-6">
+
               <%= ticket_type.name %>
             </div>
 
@@ -23,10 +26,19 @@
           <button class='btn btn-lg btn-block btn-danger'> BOOK NOW </button>
         <% end %>
       </div>
+
     </div>
     <div class="col-md-9 event-content">
       <div class="hero-img hidden-sm-down" style="background-image: url(<%= @event.hero_image_url %>); background-size: cover;"> </div>
       <div class="container">
+        <% if current_user %>
+        <div>    
+          <%= link_to "Edit this goddamn event", edit_event_path(id: @event.id), class: "btn btn-warning btn-sm pull-right" %>
+        </div>
+        <div>
+          <%= link_to "Add Ticket Type", new_event_ticket_type_path(@event), class: "btn btn-secondary btn-sm pull-right" %>
+        </div>
+        <% end %>
         <h3> <%= @event.name %> </h3>
         <div class="pull-left">
           <%= fa_icon 'clock-o' %>
@@ -56,4 +68,6 @@
       </div>  
     </div>
   </div>
+
+
 </div>

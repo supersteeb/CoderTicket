@@ -7,6 +7,11 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
+	def show
+		@user = current_user
+		@upcoming_events = Event.where('user_id = ? ', current_user.id).order("created_at DESC")
+	end
+
 	def create
 		@user = User.create user_params
 		if @user.persisted? #save

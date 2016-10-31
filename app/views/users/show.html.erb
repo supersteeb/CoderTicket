@@ -1,0 +1,50 @@
+<div class="container">
+
+	<div>
+<%= link_to "Create New Event", new_event_path %> | 
+<%= link_to "Create New Venue", new_venue_path %>
+</div>
+
+	<div class="row">
+		<div class="col-sm-6">
+
+				<h3> My Upcoming Events </h3>
+				<div class="container-fluid events-list">
+				    <% @upcoming_events.in_groups_of(3) do |g| %>
+				      <div class="row">
+				        <% g.compact.each do |e| %>
+				            <%= render partial: 'card', locals: {event: e} %>
+				        <% end %>
+				      </div>  
+				    <% end %>
+				  </div>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="row">
+
+				<h3>Events I'm Attending</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="row">
+
+				<h3>My Past Events</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="row">
+
+				<h3>Events I've attended</h3>
+			</div>
+		</div>
+	</div>

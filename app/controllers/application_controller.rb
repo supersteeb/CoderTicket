@@ -16,12 +16,24 @@ class ApplicationController < ActionController::Base
     end
 
 
-   # def authenticate
-   #   redirect_to new_session_path unless
-  #  end
+  def authenticate
+    redirect_to new_session_path #unless user_signed_in?
+  end
 
   def user_signed_in?
     current_user != nil
+  end
+
+  protected
+
+  def authenticate_user
+    if session[:user_id]
+      @current_user = User.find session[:user_id]
+      return true
+    else
+      redirect_to root_path
+      return false
+    end
   end
 
 end

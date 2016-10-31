@@ -1,0 +1,5 @@
+<h3>Edit your tickets</h3>
+
+<%= render 'form', ticket: @tickets %>
+
+<%= link_to "Back to Tickets", new_user_event_ticket_path(current_user, @event) %>
