@@ -4,7 +4,7 @@
 
 - Submitted by: **Steve Cho**
 - Time spent: **50** hours (Im such a newb)
-- URL: **Insert your Heroku URL here**
+- URL: https://powerful-gorge-50603.herokuapp.com/
 - SimpleCov Test Coverage: [coverage/index.html][coverage][index.html]
 
 ## User Stories
@@ -12,7 +12,7 @@
 The following **required** functionality is complete:
 
 * [x] Implement required user stories
-* [ ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
+* [x] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
 
 The person with best test coverage will win a small present from the instructor :)
 
