@@ -16,6 +16,16 @@ The following **required** functionality is complete:
 
 The person with best test coverage will win a small present from the instructor :)
 
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+![Video Walkthrough](walkthrough.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
+
 #### Events
 
 * [x] Users can see a list of upcoming events. Past events should not be shown.
@@ -66,14 +76,6 @@ The person with best test coverage will win a small present from the instructor 
 * [ ] Ticket types have an optional "minimum" purchase quantity. ([Example Screenshot](http://i.imgur.com/DOYtAR0.png))
 * [ ] Events are automatically labeled as "Hot". "Hot" events should have a red border or some sort of visual flourish. The event title should also be prefixed with "**HOT:**".
 * [ ] Instead of showing all of the events on the main page, an "admin" user can dictate the events that show up on the main page.
-
-## Video Walkthrough 
-
-Here's a walkthrough of implemented user stories:
-
-![Video Walkthrough](walkthrough.gif)
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 
 ## Notes
