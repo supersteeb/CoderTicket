@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get 'events/mine' => 'events#mine'
 
   get 'venues/new'
 

@@ -1,15 +1,18 @@
-<div class="col-md-4">
-  <%= link_to user_event_path(current_user, event) do %>
-    <div class="card">
-      <img class="card-img-top" src="<%= event.hero_image_url %>">
-      <div class="card-block">
-        <h4 class="card-title"><%= event.name %></h4>
-        <% if event.extended_html_description.length > 45 %>
-          <p class="card-text"><%= truncate(event.extended_html_description, length: 70, omission: '...(continued)') %></p>
-          <% else %>
-            <p class="card-text"> <%= this is some dummy text lorem ipsum biggity bullsheeit %>   </p>
-            <% end %>
+<div class="row">
+  <div class="col-md-6">
+    <%= link_to user_path(current_user) do %>
+      <div class="card">
+        <img class="card-img-top" src="<%= event.hero_image_url %>">
+        <div class="card-block">
+          <h4 class="card-title"><%= event.name %></h4>
+          <% if event.extended_html_description.length > 45 %>
+            <p class="card-text"><%= truncate(event.extended_html_description, length: 70, omission: '...(continued)') %></p>
+            <% else %>
+              <p class="card-text"> <%= 
+            "this is some dummy text lorem ipsum biggity bullsheeit" %>   </p>
+              <% end %>
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>  
+    <% end %>
+  </div>  
+</div>

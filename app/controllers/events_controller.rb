@@ -16,6 +16,12 @@ class EventsController < ApplicationController
     @user = current_user
   end
 
+  def mine
+    @user = current_user
+    @events = Event.where('user_id = ?', @user.id)
+  end
+
+
   def new
     @user = current_user
   	@event = Event.new

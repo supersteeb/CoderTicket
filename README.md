@@ -3,7 +3,7 @@
 **Name of your app** is a Ruby on Rails application that allows users to create and buy tickets to cool events.
 
 - Submitted by: **Steve Cho**
-- Time spent: **X** hours
+- Time spent: **50** hours (Im such a newb)
 - URL: **Insert your Heroku URL here**
 - SimpleCov Test Coverage: [coverage/index.html][coverage][index.html]
 
@@ -11,7 +11,7 @@
 
 The following **required** functionality is complete:
 
-* [ ] Implement required user stories
+* [x] Implement required user stories
 * [ ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
 
 The person with best test coverage will win a small present from the instructor :)
@@ -50,7 +50,7 @@ The person with best test coverage will win a small present from the instructor 
 * [x] Users can create venues.
 * [ ] An event must have at least one `ticket_type` defined before it can be published.
     * **HINT**: add `Event#have_enough_ticket_types?` (and test it)
-* [ ] User can see a list of events he or she has created.
+* [x] User can see a list of events he or she has created.
     * Suggestions
         * You can use `/events/mine` [collection routes](http://guides.rubyonrails.org/routing.html#adding-more-restful-actions)
 * [x] Users can edit their event after creation. But only the user who created the event can edit the event.
@@ -69,7 +69,8 @@ The person with best test coverage will win a small present from the instructor 
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- Getting familiar with the syntax of testing and whatnot. 
+- Figuring out what a good test is. 
 
 ## License
 
